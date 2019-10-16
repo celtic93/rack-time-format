@@ -1,18 +1,13 @@
 class App
   
   def call(env)
-    @env = env
     [status, headers, body]
   end
 
   private
 
   def status
-    if @env['REQUEST_PATH'] == '/time'
-      200
-    else
-      404
-    end
+    200
   end
 
   def headers
